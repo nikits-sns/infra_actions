@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  # на push и pull_request, только для ветки master
   push:
     branches: [master]
   pull_request:
