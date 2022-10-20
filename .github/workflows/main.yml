@@ -68,7 +68,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull sns100694/infra_act
+          sudo docker pull sns100694/infra_act:latest
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 sns100694/infra_act
+          sudo docker run --rm -d -p 5000:5000 sns100694/infra_act:latest
